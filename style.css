@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Titillium web;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: url("images/header.png");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  position: relative;
+  z-index: -1;
+}
+
+header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+header .container {
+  height: 150px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header h1 {
+  font-weight: 600;
+  font-size: 3em;
+  margin-bottom: -10px;
+  animation: changecolors 1s infinite alternate;
+}
+
+header p {
+  opacity: 0.7;
+}
+
+/* Main */
+main {
+  flex: 1;
+  align-items: flex-start;
+  width: 90%;
+  margin: 50px auto;
+}
+
+main .filter-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+main button {
+  cursor: pointer;
+  padding: 10px;
+  border: 2px solid lightgray;
+  background: transparent;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+main button:hover {
+  border: 2px solid #D61C4E;
+  color: #D61C4E;
+}
+
+main button.active {
+  border: 2px solid #D61C4E;
+  color: #D61C4E;
+}
+
+main .add-property {
+  text-decoration: none;
+  padding: 10px;
+  background: #D61C4E;
+  color: rgba(255, 255, 255, 0.473);
+  border-radius: 4px;
+  transition: 0.1s;
+}
+
+main .add-property:hover {
+  color: white;
+}
+
+/* house cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px auto;
+  transition: 0.3s;
+}
+
+.card {
+  width: 300px;
+  box-shadow: 0 0 10px lightgrey;
+  margin: 25px;
+  margin-left: 0;
+  margin-bottom: 0;
+  border-radius: 20px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+  box-shadow: 0 0 5px grey;
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.card .text {
+  padding: 30px;
+  opacity: 0.7;
+}
+
+.card .name {
+  opacity: 1;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Footer */
+footer {
+  background: grey;
+  color: white;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+}
+
+footer a {
+  color: #D61C4E;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: black;
+}
+
+@media (max-width: 500px) {
+    header {
+      font-size: 0.7em;
+    }
+
+    .filter-section .add-property {
+      position: fixed;
+      right: 3%;
+      bottom: 3%;
+      z-index: 1;
+    }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 1.2em;
+  }
+
+  button, a, input, select {
+    font-size: 1.2em;
+  }
+}
+
+/* Form page */
+#add h3 {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+#add label,
+#add input,
+#add textarea,
+#add select {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+}
+#add label {
+  margin-top: 15px;
+  font-weight: 700;
+}
+
+#add input,
+#add textarea,
+#add select {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid lightgrey;
+  outline: none;
+}
+
+#add select {
+  width: auto;
+  margin-bottom: 25px;
+}
+
+@keyframes changecolors {
+  0% {
+    color: #293462;
+  }
+
+  25% {
+    color: #D61C4E;
+  }
+
+  50% {
+    color: #CEE5D0;
+  }
+
+  75% {
+    color: #FEB139;
+  }
+
+  100% {
+    color: #FFF80A;
+  }
+}

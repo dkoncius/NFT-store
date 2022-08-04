@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="https://bin.bnbstatic.com/static/images/common/favicon.ico">
+    <title>NFT store: Form page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Add your NFT for sale</h1>
+            <p>Yes, you can sell where you live and cash!</p>
+        </div>
+    </header>
+    <main id="add">
+        <form id="form" action="index.html">
+            <h2>Add Property</h2>
+            <label for="image">Img</label>
+            <input id="image" type="text" placeholder="https://unsplash.com/" autocomplete="off">
+        
+            <label for="price">Price, Eur</label>
+            <input id="price" type="number" placeholder="50000" autocomplete="off">
+        
+            <label for="nftName">NFT name</label>
+            <input id="nftName" type="text" placeholder="Cow" autocomplete="off">
+        
+            <label for="category"></label>
+            <select id="category" name="category">
+                <option value="" disabled selected>Category</option>
+                <option value="Sports">Sports</option>
+                <option value="Gaming">Gaming</option>
+                <option value="Entertainment">Entertainment</option>
+            </select>
+            <a id="submit" class="add-property" href="index.html">Add NFT +</a>
+        </form>
+        </section>
+    </main>
+
+      <!-- Footer -->
+      <footer>
+        <p>© All rights reserved by <a href="https://www.codeacademykids.com/">Codeacademy Kids</a></p>
+    </footer>
+    <script src="add.js"></script>
+</body>
+</html>
